@@ -1,0 +1,38 @@
+name: nekomizurin
+description: >
+  A Flutter-based fan portfolio app for Nekomizu Rin, a virtual singer and content creator.
+  This app showcases her commission details, portfolio works, and donation links — all packed in a lightweight and beautiful interface that adapts to your system's dark/light theme.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^4.0.4
+  flutter_displaymode: ^0.6.0
+  android_intent_plus: ^5.2.1
+  font_awesome_flutter: ^10.8.0
+  flutter_launcher_icons: ^0.13.1
+  youtube_player_flutter: ^8.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon.jpg"
+  min_sdk_android: 21
+
+flutter:
+  assets:
+    - assets/image/price.jpg
+    - assets/image/notes.jpg
+    - assets/image/terms.jpg
+    - assets/icon.jpg
+  uses-material-design: true

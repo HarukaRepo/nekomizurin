@@ -1,0 +1,84 @@
+# -------------------------------
+# SYSTEM & OS FILES
+# -------------------------------
+# macOS
+*.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# -------------------------------
+# FLUTTER/ANDROID BUILD
+# -------------------------------
+android/.gradle/
+android/local.properties
+android/app/key.jks
+android/key.properties
+android/key.jks
+*.keystore
+*.jks
+
+# Android Studio (advanced)
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/shelf/
+.idea/
+
+# Kotlin build folder
+**/out/
+
+# Dart Tooling
+.dart_tool/
+.packages
+.pub/
+.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Flutter build folder
+build/
+
+# Ignore unused platform folders
+windows/
+linux/
+macos/
+web/
+
+# Xcode (if someday you support iOS)
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/App.framework
+ios/.symlinks/
+ios/Pods/
+ios/.flutter-plugins
+ios/.flutter-plugins-dependencies
+ios/Flutter/Generated.xcconfig
+Runner.xcworkspace
+Podfile.lock
+
+# Firebase / Env files
+*.env
+*.env.*
+
+# VSCode
+.vscode/
+
+# Logs & Temp files
+*.log
+*.tmp
+*.swp
+
+# Symbolication & Obfuscation
+app.*.symbols
+app.*.map.json
