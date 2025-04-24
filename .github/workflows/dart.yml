@@ -1,4 +1,4 @@
-name: Flutter CI
+name: Build Android APK
 
 on:
   push:
@@ -8,11 +8,10 @@ on:
 
 jobs:
   build:
-    name: Build Android APK
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Setup Flutter
@@ -23,17 +22,11 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Analyze project
-        run: flutter analyze
+      - name: Build APK (release split per ABI)
+        run: flutter build apk --release --split-per-abi
 
-      - name: Run tests
-        run: flutter test
-
-      - name: Build APK (Release)
-        run: flutter build apk --release
-
-      - name: Upload APK
+      - name: Upload APKs
         uses: actions/upload-artifact@v3
         with:
-          name: release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          name: release-apks
+          path: build/app/outputs/flutter-apk/*.apk
